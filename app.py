@@ -22,12 +22,12 @@ while True:
         response = requests.post(url, headers=headers, json=data)
         print("Status Code", response.status_code)
         print("Response: ", response.text)
-        #time.sleep(5)
-
-        html = "<h3>Hello {name}!</h3>" \
-                "<b>Sent request to: {url}<br/>"
-        return html.format(name=os.getenv("NAME", "APIC User"), url=os.getenv("URL","https://default.svc"))
-        return 'My hostname is %s'
+        time.sleep(5)
         print("JSON Response ", response.json())
+        #html = "<h3>Hello {name}!</h3>" \
+                #"<b>Sent request to: {url}<br/>"
+        #return html.format(name=os.getenv("NAME", "APIC User"), url=os.getenv("URL","https://default.svc"))
+        #return 'My hostname is %s'
+        
 
 
