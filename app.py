@@ -20,11 +20,7 @@ app = Flask(__name__)
 	url = os.getenv('URL')
 	headers = {"content-type": "application/json; charset=utf-8" }
 
-	data = {
-  "VoterName": "Peter G",
-  "VoterAddress":"Test Address",
-  "VotingIntention": "B"
-  }
+	data = {"VoterName": "Peter G","VoterAddress":"Test Address","VotingIntention": "B"}
 
 	print("Sending request to " + url)
 	response = requests.post(url, headers=headers, json=data)
