@@ -13,15 +13,11 @@ import instana
 
 
 
-    url = os.getenv('URL')
-    headers = {"content-type": "application/json; charset=utf-8" }
+url = os.getenv('URL')
+headers = {"content-type": "application/json; charset=utf-8" }
 
-    data = {
-        "VoterName": "Peter G",
-        "VoterAddress":"Test Address",
-        "VotingIntention": "B"
-        }
-    while True:
+data = {"VoterName": "Peter G","VoterAddress":"Test Address","VotingIntention": "B"}
+while True:
         print("Sending request to " + url)
         response = requests.post(url, headers=headers, json=data)
         print("Status Code", response.status_code)
