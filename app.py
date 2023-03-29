@@ -15,7 +15,8 @@ import instana
 
 app = Flask(__name__)
 
-@app.route("/") def hello():
+@app.route("/") 
+def hello():
 
 	url = os.getenv('URL')
 	headers = {"content-type": "application/json; charset=utf-8" }
